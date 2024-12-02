@@ -59,7 +59,7 @@ class MainApp extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 8),
-                          const Row(
+                          const Row( //row agar harga bisa bersandingan
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
@@ -74,7 +74,7 @@ class MainApp extends StatelessWidget {
                               Text(
                                 "Rp. 45.000",
                                 style: TextStyle(
-                                  decoration: TextDecoration.lineThrough,
+                                  decoration: TextDecoration.lineThrough, //untuk mencoret harga
                                   color: Colors.brown,
                                   fontSize: 12,
                                 ),
@@ -86,10 +86,10 @@ class MainApp extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               RatingBar.builder(
-                                initialRating: 3.5,
-                                minRating: 1,
+                                initialRating: 3.5, //jumlah rating awal
+                                minRating: 1, //minimal rating
                                 direction: Axis.horizontal,
-                                allowHalfRating: true,
+                                allowHalfRating: true, //untuk rating setengah
                                 itemCount: 5,
                                 itemSize: 18,
                                 itemBuilder: (context, _) => Icon(
@@ -99,7 +99,7 @@ class MainApp extends StatelessWidget {
                                 onRatingUpdate: (rating) {
                                   print(rating);
                                 },
-                                ignoreGestures: true,
+                                ignoreGestures: true, //tidak bisa diganti-ganti
                               ),
                             ],
                           ),
